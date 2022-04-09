@@ -11,12 +11,23 @@
     </select>
 
     <!-- TODO ハンズオン 4-2 resultMapタグを定義 -->
+    <resultMap type="com.example.springmybatis.da.entity.InquiryTag" id="Base_Result_Map">
+    	<id column="id" property="id" jdbcType="INTEGER"/>
+    	<result column="inquiry_id" property="inquiryId" jdbcType="INTEGER"/>
+    	<result column="description" property="description" jdbcType="VARCHAR"/>
+    	<result column="created" property="created" jdbcType="TIMESTAMP"/>
+    </resultMap>
 
 
     <!-- TODO ハンズオン 4-6 resultMapタグを定義 -->
 
 
     <!-- TODO ハンズオン 1-3 selectを定義 -->
+    <select id="find" parameterType="int" resultMap="Base_Result_Map">
+    	select id, inquiry_id, description, created
+    	from inquiry_tag
+    	where id = #{id}
+    </select>
 
 
     <!-- TODO ハンズオン 2-2 selectタグを定義 -->

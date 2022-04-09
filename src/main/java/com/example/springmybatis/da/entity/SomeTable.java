@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * TypeHandler確認用テーブル
  */
-@Data
 public class SomeTable {
     /**
      * ID
@@ -40,4 +39,36 @@ public class SomeTable {
      * 標準のTypeHandlerでは処理できないため、独自TypeHandlerが必要
      */
     private List<String> stringList;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public LocalDate getNumberDate() {
+		return numberDate;
+	}
+	public void setNumberDate(LocalDate numberDate) {
+		this.numberDate = numberDate;
+	}
+	public Integer getStringInteger() {
+		return stringInteger;
+	}
+	public void setStringInteger(Integer stringInteger) {
+		this.stringInteger = stringInteger;
+	}
+	public boolean isStringBoolean() {
+		return stringBoolean;
+	}
+	public void setStringBoolean(boolean stringBoolean) {
+		this.stringBoolean = stringBoolean;
+	}
+	public List<String> getStringList() {
+		return stringList;
+	}
+	public void setStringList(List<String> stringList) {
+		this.stringList = stringList;
+	}
+    
+    
 }

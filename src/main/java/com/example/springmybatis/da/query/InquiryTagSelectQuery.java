@@ -58,10 +58,14 @@ public class InquiryTagSelectQuery {
         }
     }
 
-    @AllArgsConstructor
     private static class OrderCondition {
         private final OrderByField field;
         private final SortOrder sortOrder;
+        
+        public OrderCondition (final OrderByField field, final SortOrder sortOrder) {
+        	this.field = field;
+			this.sortOrder = sortOrder;
+        }
     }
 
     private List<Integer> inquiryIds;

@@ -1,5 +1,8 @@
 package com.example.springmybatis.da.mapper;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +19,11 @@ class InquiryTagMapperTest {
     @Test
     void find() {
         // TODO ハンズオン 1-4 コメントアウトを解除してテストを実行
-//        var inquiryTag = inquiryTagMapper.find(1);
-//
-//        assertNotNull(inquiryTag);
-//
-//        assertEquals("問合せ", inquiryTag.getDescription());
+        var inquiryTag = inquiryTagMapper.find(1);
+
+        assertNotNull(inquiryTag);
+
+        assertEquals("問合せ", inquiryTag.getDescription());
 
     }
 
