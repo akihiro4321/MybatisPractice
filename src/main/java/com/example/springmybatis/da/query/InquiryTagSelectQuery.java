@@ -95,4 +95,46 @@ public class InquiryTagSelectQuery {
     public void addOrderCondition(OrderByField field, SortOrder sortOrder) {
         orderConditions.add(new OrderCondition(field, sortOrder));
     }
+
+	public List<Integer> getInquiryIds() {
+		return inquiryIds;
+	}
+
+	public void setInquiryIds(List<Integer> inquiryIds) {
+		this.inquiryIds = inquiryIds;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public LocalDateTime getFromCreated() {
+		return fromCreated;
+	}
+
+	public void setFromCreated(LocalDateTime fromCreated) {
+		this.fromCreated = fromCreated;
+	}
+
+	public LocalDateTime getToCreated() {
+		return toCreated;
+	}
+
+	public void setToCreated(LocalDateTime toCreated) {
+		this.toCreated = toCreated;
+	}
+
+	public List<OrderCondition> getOrderConditions() {
+		return orderConditions;
+	}
+
+	public void setOrderConditions(List<OrderCondition> orderConditions) {
+		this.orderConditions = orderConditions;
+	}
+    
+    
 }
